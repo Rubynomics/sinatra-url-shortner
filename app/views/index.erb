@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Short URLs!</h1>
+  <% @all_urls.each do |url| %>
+    <p><%= url.url %>: <a href='<%= url.short_url %>'><%= url.short_url %></a> click count: <%= url.click_count %></p>
+  <% end %>
+  <h1>Generate a short URL!</h1>
+
+  <form action='/' method='post'>
+
+    http:// <input type='text' name='original_url' placeholder='www.example.com'>
+
+    <input type='submit' value='generate'>
+  </form>
+</div>
